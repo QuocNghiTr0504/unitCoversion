@@ -1,0 +1,119 @@
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <!-- Boosted mod -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <!-- End mod -->
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="../assets/slide1.webp" class="d-block w-100 sizeimg" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../assets/slide4.webp" class="d-block w-100 sizeimg" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../assets/slide7.webp" class="d-block w-100 sizeimg" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../assets/slide3.webp" class="d-block w-100 sizeimg" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../assets/slide2.webp" class="d-block w-100 sizeimg" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="tittle">
+    <h1>Chuyển đổi đơn vị</h1>
+</div>
+<div class="instruc">
+    <h4>Units Converter là website cho phép bạn sử dụng chuyển đổi nhanh các đơn vị đo lường, chiều dài, trọng lượng và diện tích... một cách nhanh chóng và chính xác nhất. Ngoài một công cụ hỗ trợ quy đổi đơn vị. Unit Converter còn được yêu thích bởi các tính năng thông minh đi kèm, cùng với giao diện đơn giản, dễ sử dụng.</h4>
+</div>
+<div class="container" id="units">
+    <div class="row">
+        <div class="col"  >
+            <div class="tol">
+                <h4 class="tittlepost">Chiều dài</h4>
+                <h5 class="want">Tôi muốn chuyển đổi:</h5>
+                <input type="text" [(ngModel)]="name" (keyup)="h2c()" placeholder="Nhập số...."> <br>
+                <h5 class="want">Từ:</h5>
+                <select class="form-control" name="" id="" [(ngModel)]="choice" (change)="h2c()">
+                    <option *ngFor="let unit of units" [value]="unit.value">{{unit.name}}</option>    
+                </select>
+                <br>
+                <h5 class="for">Đến: </h5>
+
+                <select class="form-control" name="" id="" [(ngModel)]="choice1" (change)="h2c()">
+                    <option *ngFor="let unit of units" [value]="unit.value">{{unit.name}}</option>
+                </select>
+                <div class="results">
+                    <span (click)="repeat()"><i class="fa-solid fa-repeat"></i></span>
+                    <div class="result">
+                        {{result|spaces}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="tol">
+                <h4 class="tittlepost">Khối lượng</h4>
+                <h5 class="want">Tôi muốn chuyển đổi:</h5>
+                <input type="text" [(ngModel)]="name1" (keyup)="weightCalculate()" placeholder="Nhập số...."> <br>
+                <h5 class="want">Từ:</h5>
+                <select class="form-control" name="" id="" [(ngModel)]="choiceweight" (change)="weightCalculate()">
+                    <option *ngFor="let unit of weights" [value]="unit.value">{{unit.name}}</option>    
+                </select>
+                <br>
+                <h5 class="for">Đến: </h5>
+                <select class="form-control" name="" id="" [(ngModel)]="choiceweight1" (change)="weightCalculate()">
+                    <option *ngFor="let unit of weights" [value]="unit.value">{{unit.name}}</option>
+                </select>
+                <div class="results">
+                    <span (click)="repeatWeight()"><i class="fa-solid fa-repeat"></i></span>
+                    <div class="result">
+                        {{resultWeight|spaces}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="tol">
+                <h4 class="tittlepost">Diện tích</h4>
+                <h5 class="want">Tôi muốn chuyển đổi:</h5>
+                <input type="text" [(ngModel)]="name2" (keyup)="acreageCalculate()" placeholder="Nhập số...."> <br>
+                <h5 class="want">Từ:</h5>
+                <select class="form-control" name="" id="" [(ngModel)]="choiceAcreage" (change)="acreageCalculate()">
+                    <option *ngFor="let unit of acreage" [value]="unit.value">{{unit.name}}</option>    
+                </select>
+                <br>
+                <h5 class="for">Đến: </h5>
+                <select class="form-control" name="" id="" [(ngModel)]="choiceAcreage1" (change)="acreageCalculate()">
+                    <option *ngFor="let unit of acreage" [value]="unit.value">{{unit.name}}</option>
+                </select>
+                <div class="results">
+                    <span (click)="repeatAcreage()"><i class="fa-solid fa-repeat"></i></span>
+                    <div class="result">
+                        {{resultAcreage|spaces}}
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+       
+    </div>
+    
+</div>
+

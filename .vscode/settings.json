@@ -1,0 +1,14 @@
+{
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+    "css.completion.completePropertyWithSemicolon": true,
+    "css.completion.triggerPropertyValueCompletion": true,
+    "css.format.newlineBetweenRules": true,
+    "css.format.newlineBetweenSelectors": true,
+    "css.format.preserveNewLines": true,
+    "editor.lineNumbers": "on",
+    "php.format.rules.addCommaAfterLastArrayElement": false,
+    "html.format.wrapAttributes": "auto",
+    "editor.find.autoFindInSelection": "always",
+    "editor.formatOnType": false
+}

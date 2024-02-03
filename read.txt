@@ -1,0 +1,45 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+})
+export class HomeComponent {
+
+  name: number = 1;
+  choice: number = 0;
+  choice1: number = 0;
+  result: number | string = 0;
+
+  units = [
+    { name: 'Chọn đơn vị', value: 0 },
+    { name: 'Kilomet(km)', value: 1 },
+    { name: 'Mét(m)', value: 2 },
+    { name: 'Decimet(dm)', value: 3 },
+    { name: 'Centimet(cm)', value: 4 },
+    { name: 'Milimet(mm)', value: 5 },
+    { name: 'Inch(in)', value: 6 },
+    { name: 'Feet(ft)', value: 7 }
+  ];
+
+  unitsConversion: Record<number, Record<number, string | number>> = {
+    1: { 1: 'km', 2: 1000, 3: 10000, 4: 100000, 5: 1000000, 6: 39370.08, 7: 3280.84 },
+    2: { 1: 0.001, 2: 'm', 3: 10, 4: 100, 5: 1000, 6: 39.37, 7: 3.28084 },
+    3: { 1: 0.0001, 2: 0.1, 3: 'dm', 4: 10, 5: 100, 6: 3.93701, 7: 0.328084 },
+    4: { 1: 0.00001, 2: 0.01, 3: 0.1, 4: 'cm', 5: 10, 6: 0.393701, 7: 0.0328084 },
+    5: { 1: 0.000001, 2: 0.001, 3: 0.01, 4: 0.1, 5: 'mm', 6: 0.0393701, 7: 0.00328084 },
+    6: { 1: 25400, 2: 25.4, 3: 2.54, 4: 0.254, 5: 0.0254, 6: 'in', 7: 0.0833333 },
+    7: { 1: 0.0003048, 2: 0.3048, 3: 30.48, 4: 304.8, 5: 3048, 6: 12, 7: 'ft' }
+  };
+
+  h2c() {
+    const conversionValue: string | number = this.unitsConversion[this.choice][this.choice1];
+    this.result = (typeof conversionValue === 'number') ? (this.name * conversionValue + ' ' + this.units[this.choice1].name) : conversionValue;
+  }
+
+  repeat() {
+    [this.choice, this.choice1] = [this.choice1, this.choice];
+    this.h2c();
+  }
+}

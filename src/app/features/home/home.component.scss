@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 70vh;
+    margin-top: 20px;
+}
+.row {
+    position: absolute;
+    left :0;
+    right: 0;
+    margin-top: 10px;
+    padding: 20px 20px;
+}
+
+.instruc{
+    color: black;
+    margin-top: 30px;
+    padding:  10px 10px;
+    margin-left: 50px;
+    font-family: serif;
+    font-size: 23px;
+    border-left: 6px solid orangered ;
+    border-bottom: solid 3px #232931;
+
+    box-shadow: 5px 0px 0px 0px orangered;
+    box-sizing: border-box;
+}
+
+.tittle {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.tittlepost {
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: orangered;
+}
+
+.want,
+.for {
+    font-size: 18px;
+    padding: 4px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tol {
+    margin-left: 60px;
+    border: black solid 3px;
+    padding: 10px 10px;
+    margin-top: 2px;
+    width: 75%;
+    background-image: linear-gradient(180deg, #f8e1cb, #DDF2FD);
+    padding-bottom: 20px;
+    box-shadow: 0 2px 2px 1px orangered;
+}
+
+.post {
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input,
+.form-control {
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    background-color: #fff;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 3px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.content {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    background-color: #A0E9FF;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.carousel-item{
+    margin-right: 0;
+    padding: 0;
+}
+
+.d-block{
+    object-fit: cover/center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img{
+    height: 85vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.highlights{
+   display: inline-block;
+    border: 3px solid #f89406 ;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    overflow: hidden;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 500;
+
+   
+}
+.hltittle{
+    color: #f89406;
+}
+.hlpost{
+    list-style: none;
+}
+.highlights ul li:before {
+    content: "●";
+    color: #f89406;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
