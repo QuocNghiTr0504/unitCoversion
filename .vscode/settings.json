@@ -10,5 +10,10 @@
     "php.format.rules.addCommaAfterLastArrayElement": false,
     "html.format.wrapAttributes": "auto",
     "editor.find.autoFindInSelection": "always",
-    "editor.formatOnType": false
+    "editor.formatOnType": false,
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "style": "scss"
+        }
+    }
 }
